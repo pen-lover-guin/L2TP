@@ -1,7 +1,5 @@
 # L2TP
 
-Все команды далее стоит выполнять из под **root** пользователя или использовать ```sudo```.
-
 Server - Ubuntu 18.04
 
 Client - Ubuntu 18.04
@@ -20,17 +18,17 @@ Client - Ubuntu 18.04
 
 В качестве клиента и cервера мы будем использовать xl2tpd. Установим необходимые пакеты:
     
-    apt install xl2tpd
+    sudo apt install xl2tpd
     
 ## Шаг 2 - Настройка L2TP
     
 Теперь необходимо отредактировать файл /etc/xl2tpd/xl2tpd.conf. Прежде чем внести какие-либо изменения, создадим его резервную копию: 
 
-    mv /etc/xl2tpd/xl2tpd.conf{,.original}
+    sudo mv /etc/xl2tpd/xl2tpd.conf{,.original}
     
 Далее создадим новый конфигурационный файл:
 
-    nano /etc/xl2tpd/xl2tpd.conf
+    sudo nano /etc/xl2tpd/xl2tpd.conf
     
 Добавим следующие строки:
 
@@ -75,30 +73,30 @@ Client - Ubuntu 18.04
     
 Для применения изменений выполните команду:
 
-    sysctl -p
+    sudo sysctl -p
     
 # Шаг 4 - Создание NAT-правил для iptables
 
 Перед тем, как изменить этот файл, мы должны найти публичный интерфейс сети. Для этого наберите команду:
 
-    ip route | grep default
+    sudo ip route | grep default
     
 Публичный интерфейс должен следовать за словом **dev**. Например, в нашем случае этот интерфейс называется ```eth0```.
 
 Далее перейдем к настройкам iptables.
 
-    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+    sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
     
 Далее нужно сохранить проделанные нами изменения. Воспользуемся утилитой ```iptables-persistent```.
 
-    apt install iptables-persistent
+    sudo apt install iptables-persistent
     
 >Во время установки в открывшихся диалогах нужно выбрать два раза **Yes**.
 
 Сохраним настройки iptables
 
-    netfilter-persistent save
-    netfilter-persistent reload
+    sudo netfilter-persistent save
+    sudo netfilter-persistent reload
     
 ## Шаг 5 - Настройка клиентов
 
@@ -106,9 +104,9 @@ Client - Ubuntu 18.04
 
 Для начала установим необходимые пакеты:
     
-    apt update
-    apt install network-manager-l2tp
-    apt install network-manager-l2tp-gnome
+    sudo apt update
+    sudo apt install network-manager-l2tp
+    sudo apt install network-manager-l2tp-gnome
     
 Для подключения к VPN воспользуемся следующей инструкцией. Далее заходим в Settings -> Network. 
 
