@@ -111,11 +111,15 @@ Client - Ubuntu 18.04
     apt install network-manager-l2tp-gnome
     
 Далее заходим в Settings -> Network. 
+
 ![Настройка](https://sun1-86.userapi.com/t5VBHad3DOLRkw3K8OAfB6hzdb6gIfb2aMzs6w/dqIqedhAibE.jpg )
 
 В разделе VPN нажимаем на "+". 
+
 ![Добавление VPN](https://sun1-30.userapi.com/95EqMIPesHVw5dMFv_VGvVbIIaCgI0IRJoRw4A/QAxCCH3JF9A.jpg )
+
 В появившемся окне выбираем **Layer 2 Tunneling Protocol (L2TP).**
+
 ![Выбор L2TP](https://sun1-98.userapi.com/2pkLLfjPaC1FBXuClphXLB63u3QMvnxe006pIw/cTSGJGxTkOY.jpg )
 
 В поле **Name** даем любое название VPN(к примеру "L2TP").
@@ -124,11 +128,15 @@ Client - Ubuntu 18.04
 
 В поле **User name** и **Password** вводим логин и пароль для пользователя, который мы указывали на сервере в файле ```/etc/ppp/chap-secrets```. (Для ввода пароля нужно нажать на знак вопроса в поле Password и выбрать "Store the password for all users". В противном случае система будет запрашивать пароль при каждом VPN соединении).
 
+![Ввод данных](https://sun1-24.userapi.com/2lIYrR9sHniUhwBl92ApK5Wwj6Tte029dJernA/o1FnQQ-gZ9c.jpg )
+
 Далее выбираем пункт **PPP Settings..**
 
 Ставим галочку на пункте **Use Point-to-point encryption(MPPE).** И в поле **Security** выбираем **128-bit most secure.**
 
 В разделе **Misc** устанавливаем значения **MTU** и **MRU** в 1410.
+
+![PPP settings](https://sun1-22.userapi.com/ZfQxQMuUPweRYkpVB9WAngno9g03Re613OaFKA/ZhDcFjF7Kzc.jpg )
 
 После чего нажимаем **Okey** и **Add**.
 
