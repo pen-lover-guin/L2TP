@@ -110,7 +110,7 @@ Client - Ubuntu 18.04
     apt install network-manager-l2tp
     apt install network-manager-l2tp-gnome
     
-Далее заходим в Settings -> Network. 
+Для подключения к VPN воспользуемся следующей инструкцией. Далее заходим в Settings -> Network. 
 
 ![Настройка](https://sun1-86.userapi.com/t5VBHad3DOLRkw3K8OAfB6hzdb6gIfb2aMzs6w/dqIqedhAibE.jpg )
 
