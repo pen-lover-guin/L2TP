@@ -128,7 +128,7 @@ Client - Ubuntu 18.04
 
 В поле **User name** и **Password** вводим логин и пароль для пользователя, который мы указывали на сервере в файле ```/etc/ppp/chap-secrets```. (Для ввода пароля нужно нажать на знак вопроса в поле Password и выбрать "Store the password for all users". В противном случае система будет запрашивать пароль при каждом VPN соединении).
 
-![Ввод данных](https://sun1-24.userapi.com/2lIYrR9sHniUhwBl92ApK5Wwj6Tte029dJernA/o1FnQQ-gZ9c.jpg )
+![Ввод данных](https://sun1-20.userapi.com/SN2M2defeFCoQhzhANicLwwmbQr_5OSLKTpIyA/c_LaOyqWaBE.jpg )
 
 Далее выбираем пункт **PPP Settings..**
 
